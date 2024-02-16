@@ -26,6 +26,7 @@ class AppTheme {
   static FontWeight black = FontWeight.w900;
 
   static final ThemeData lightTheme = ThemeData(
+    useMaterial3: true,
     primaryColor: AppColors.primaryColor,
     backgroundColor: AppColors.whiteColor,
     scaffoldBackgroundColor: AppColors.whiteColor,

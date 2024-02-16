@@ -15,32 +15,12 @@ class AppScaffold extends StatefulWidget {
 }
 
 class _AppScaffoldState extends State<AppScaffold> {
-  int _selectedIndex = 0;
   List<MenuItem> menuItems = [
     MenuItem(title: "Home", path: "/home"),
     MenuItem(title: "Wifi Details", path: "/wifi"),
     MenuItem(title: "Calendar", path: "/calendar"),
+    MenuItem(title: "Speed Test", path: "/internet"),
   ];
-
-  void _onItemTapped(int index, BuildContext context) {
-    setState(() {
-      _selectedIndex = index;
-    });
-    switch(_selectedIndex) {
-      case 0:
-        context.go('/home');
-        break;
-      case 1:
-        context.go('/wifi');
-        break;
-      case 2:
-        context.go('/support');
-        break;
-      case 3:
-        context.go('/account');
-        break;
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -85,35 +65,6 @@ class _AppScaffoldState extends State<AppScaffold> {
           ],
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   type: BottomNavigationBarType.fixed, // Fixed
-      //   backgroundColor: Colors.black, // <-- This works for fixed
-      //   items: const <BottomNavigationBarItem>[
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.wifi),
-      //       label: 'Network',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.support_agent),
-      //       label: 'Support',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.school),
-      //       label: 'Account',
-      //     ),
-      //   ],
-      //   currentIndex: _selectedIndex,
-      //   selectedItemColor: AppColors.whiteColor,
-      //   showUnselectedLabels: true,
-      //   unselectedItemColor: AppColors.unSelectedTabColor,
-      //   onTap: (int value) {
-      //     _onItemTapped(value, context);
-      //   },
-      // ),
     );
   }
 }

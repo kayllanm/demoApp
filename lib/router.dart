@@ -3,6 +3,7 @@ import 'package:demoapp/bottom_navigation.dart';
 import 'package:demoapp/views/account/account.dart';
 import 'package:demoapp/views/calendar/calendar_view.dart';
 import 'package:demoapp/views/home.dart';
+import 'package:demoapp/views/internet/internet_speed_test.dart';
 import 'package:demoapp/views/support.dart';
 import 'package:demoapp/views/wifi/wifi_details.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +39,7 @@ class AppRouter {
   static const home = '/home';
   static const wifi = '/wifi';
   static const calendar = '/calendar';
+  static const internet = '/internet';
 
   //bottom navigation
   static const support = '/support';
@@ -146,6 +148,16 @@ class AppRouter {
         pageBuilder: (context, state) {
           return getPage(
             child: const CalendarPage(),
+            state: state,
+          );
+        },
+      ),
+      GoRoute(
+        parentNavigatorKey: parentNavigatorKey,
+        path: internet,
+        pageBuilder: (context, state) {
+          return getPage(
+            child: const InternetSpeedTest(),
             state: state,
           );
         },

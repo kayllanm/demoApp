@@ -21,4 +21,7 @@ class AppColors {
 
   static const Color backgroundColorDark = Color(0xFF303030);
 
+  static const Color gauge = Color(0xffC2AD94);
+  static const Color activeGauge = Color(0xffC2AD94);
+
 }

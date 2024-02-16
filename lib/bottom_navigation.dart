@@ -18,9 +18,6 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bottom Navigator Shell'),
-      ),
       body: SafeArea(
         child: widget.child,
       ),
